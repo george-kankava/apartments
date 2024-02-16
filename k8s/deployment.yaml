@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-java
+  labels:
+    app: app-java
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-java
+  template:
+    metadata:
+      name: app-java
+      labels:
+        app: app-java
+    spec:
+      containers:
+        - name: app-java-container
+          image: georgekankava/app-java:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MONGO_URL
+              value: mongodb://mongo:27017/dev
+      restartPolicy: Always
+      
