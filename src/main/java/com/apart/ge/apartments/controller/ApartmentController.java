@@ -33,8 +33,7 @@ public class ApartmentController {
 
     @GetMapping("/")
     public String get() {
-        apartmentService.service();
-        return null;
+        return "Hi";
     }
 
     @GetMapping("/greeting")
