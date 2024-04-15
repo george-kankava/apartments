@@ -26,4 +26,8 @@ public class ApartmentService {
     public Property getApartment(Integer id) {
         return propertyRepository.getProperty(id, PropertyType.APARTMENT);
     }
+
+    public Property createProperty(Property property) {
+        return null;
+    }
 }
