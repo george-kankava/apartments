@@ -24,10 +24,13 @@ public class ApartmentService {
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public Property getApartment(Integer id) {
-        return propertyRepository.getProperty(id, PropertyType.APARTMENT);
+        return propertyRepository.getPropertyByIdAndPropertyType(id, PropertyType.APARTMENT);
     }
 
     public Property createProperty(Property property) {
         return null;
+    }
+
+    public void save(Property existingProperty) {
     }
 }
