@@ -10,5 +10,5 @@ import org.springframework.stereotype.Repository;
 public interface PropertyRepository extends CrudRepository<Property, Integer> {
 
 
-    public Property getProperty(Integer id, PropertyType propertyType);
+    Property getPropertyByIdAndPropertyType(Integer id, PropertyType propertyType);
 }
